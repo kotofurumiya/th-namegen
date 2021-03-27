@@ -67,7 +67,7 @@ Examples:
 `noneOfTitleTags` tests a title includes **none** of `tags`.
 
 ```typescript
-import { generateName, selectCharacters, noneOfTitleTags } from 'th-namegen';
+import { generateName, selectCharacters, noneOfTitleTags } from '@kotofurumiya/th-namegen';
 
 // only game characters
 const games = selectCharacters([noneOfTitleTags(['book', 'hifuu'])]);
@@ -82,7 +82,7 @@ const name = generateName({
 `yearFrom` tests a title released in `year` or after.
 
 ```typescript
-import { generateName, selectCharacters, yearFrom } from 'th-namegen';
+import { generateName, selectCharacters, yearFrom } from '@kotofurumiya/th-namegen';
 
 // characters 2015-
 const chars = selectCharacters([yearFrom(2015)]);
@@ -99,7 +99,7 @@ Note: `common` characters(Reimu, Marisa) always pass since they have no release 
 `yearTo` tests a title released in `year` or before.
 
 ```typescript
-import { generateName, selectCharacters, yearFrom } from 'th-namegen';
+import { generateName, selectCharacters, yearFrom } from '@kotofurumiya/th-namegen';
 
 // characters -2010
 const chars = selectCharacters([yearTo(2010)]);

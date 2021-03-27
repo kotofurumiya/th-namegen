@@ -49,7 +49,7 @@ Use it:
 
 ```typescript
 // syntax for TypeScript or modern JavaScript
-import { generateName } from 'th-namegen';
+import { generateName } from '@kotofurumiya/th-namegen';
 
 // syntax for traditional JavaScript
 // const { generateName } = require('th-namegen');
@@ -111,7 +111,7 @@ const name2 = generateName({
 You can use filters to limit character source.
 
 ```typescript
-import { generateName, selectCharacters, oneOfTitleTags } from 'th-namegen';
+import { generateName, selectCharacters, oneOfTitleTags } from '@kotofurumiya/th-namegen';
 
 // choose your favorite!
 const myFavorites = selectCharacters([oneOfTitleTags(['pc-98'])]);
