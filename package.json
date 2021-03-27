@@ -17,6 +17,8 @@
     "utility"
   ],
   "author": "Koto Furumiya <kotofurumiya@gmail.com>",
+  "homepage": "https://github.com/kotofurumiya/th-namegen",
+  "bugs": "https://github.com/kotofurumiya/th-namegen/issues",
   "license": "Zlib",
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
