@@ -13,9 +13,9 @@ marisa-cirno
 ## Progress
 
 - [x] Koumakyou
-- [ ] Youyoumu
-- [ ] Suimusou
-- [ ] Eiyashou
+- [x] Youyoumu
+- [x] Suimusou
+- [x] Eiyashou
 - [ ] Kaeizuka
 - [ ] Bunkachou
 - [ ] Fuujinroku
@@ -140,6 +140,7 @@ type TouhouCharacter =
   | {
       nameType: 'fullname';
       firstName: string;
+      middleName?: string;
       lastName: string;
       aka?: string; //  e.g.'udonge' for Udongein
     };

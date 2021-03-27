@@ -19,8 +19,44 @@ var koumakyou = [
 ];
 var koumakyou_default = koumakyou;
 
+// src/character/007_00_youyoumu.ts
+var youyoumu = [
+  {nameType: "fullname", firstName: "letty", lastName: "whiterock"},
+  {nameType: "simple", name: "chen"},
+  {nameType: "fullname", firstName: "alice", lastName: "margatroid"},
+  {nameType: "fullname", firstName: "lily", lastName: "white"},
+  {nameType: "fullname", firstName: "lunasa", lastName: "prismriver"},
+  {nameType: "fullname", firstName: "merlin", lastName: "prismriver"},
+  {nameType: "fullname", firstName: "lyrica", lastName: "prismriver"},
+  {nameType: "fullname", firstName: "youmu", lastName: "konpaku"},
+  {nameType: "fullname", firstName: "yuyuko", lastName: "saigyouji"},
+  {nameType: "fullname", firstName: "ran", lastName: "yakumo"},
+  {nameType: "fullname", firstName: "yukari", lastName: "yakumo"}
+];
+var youyoumu_default = youyoumu;
+
+// src/character/007_05_suimusou.ts
+var suimusou = [
+  {nameType: "fullname", firstName: "suika", lastName: "ibuki"}
+];
+var suimusou_default = suimusou;
+
+// src/character/008_00_eiyashou.ts
+var eiyashou = [
+  {nameType: "fullname", firstName: "wriggle", lastName: "nightbug"},
+  {nameType: "fullname", firstName: "mystia", lastName: "lorelei"},
+  {nameType: "simple", name: "chen"},
+  {nameType: "fullname", firstName: "keine", lastName: "kamishirasawa"},
+  {nameType: "fullname", firstName: "tewi", lastName: "inaba"},
+  {nameType: "fullname", firstName: "reisen", middleName: "udongein", lastName: "inaba", aka: "udonge"},
+  {nameType: "fullname", firstName: "eirin", lastName: "yagokoro"},
+  {nameType: "fullname", firstName: "kaguya", lastName: "houraisan"},
+  {nameType: "fullname", firstName: "mokou", lastName: "fujiwara"}
+];
+var eiyashou_default = eiyashou;
+
 // src/character/index.ts
-var characters = [...common_default, ...koumakyou_default];
+var characters = [...common_default, ...koumakyou_default, ...youyoumu_default, ...suimusou_default, ...eiyashou_default];
 
 // src/index.ts
 var random = (min, max) => {

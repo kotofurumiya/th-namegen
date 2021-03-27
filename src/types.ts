@@ -6,6 +6,7 @@ export type TouhouCharacter =
   | {
       readonly nameType: 'fullname';
       readonly firstName: string;
+      readonly middleName?: string;
       readonly lastName: string;
       readonly aka?: string;
     };

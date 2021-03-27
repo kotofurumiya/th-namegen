@@ -1,4 +1,4 @@
-import { TouhouCharacter } from '../types';
+import type { TouhouCharacter } from '../types';
 
 const koumakyou: ReadonlyArray<TouhouCharacter> = [
   { nameType: 'simple', name: 'rumia' },
