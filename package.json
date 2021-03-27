@@ -8,7 +8,7 @@
   "scripts": {
     "build": "npm run build:node && npm run build:web",
     "build:web": "esbuild src/index.ts --target=es2018 --format=iife --global-name=thNameGen --bundle --minify --outfile=build/th-namegen-web.js --define:process.env.NODE_ENV=\\\"production\\\"",
-    "build:node": "esbuild src/index.ts --bundle  --format=esm --outfile=build/index.js --platform=node && tsc --emitDeclarationOnly --outDir build",
+    "build:node": "esbuild src/index.ts --target=es2018 --bundle  --format=esm --outfile=build/index.js --platform=node && tsc --emitDeclarationOnly --outDir build",
     "format": "prettier --write {src,__tests__}/",
     "lint": "eslint --max-warnings 0 src",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest"

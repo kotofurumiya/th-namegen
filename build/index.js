@@ -52,10 +52,11 @@ var pickLastNameLike = (character) => {
   }
 };
 var generateName = (options = {}) => {
-  const delimiter = options.delimiter ?? "-";
-  const randomFunc = options.randomFunc ?? random;
-  const candidates = options.characterCandidates ?? characters;
-  const converter = options.nameChunkConverter ?? identity;
+  var _a, _b, _c, _d;
+  const delimiter = (_a = options.delimiter) != null ? _a : "-";
+  const randomFunc = (_b = options.randomFunc) != null ? _b : random;
+  const candidates = (_c = options.characterCandidates) != null ? _c : characters;
+  const converter = (_d = options.nameChunkConverter) != null ? _d : identity;
   const characterA = candidates[randomFunc(0, candidates.length - 1)];
   const characterB = candidates[randomFunc(0, candidates.length - 1)];
   const generated = [
