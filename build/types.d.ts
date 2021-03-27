@@ -8,3 +8,10 @@ export declare type TouhouCharacter = {
     readonly lastName: string;
     readonly aka?: string;
 };
+export declare type TouhouTitleTag = 'common' | 'pc-98' | 'windows' | 'book' | 'hifuu' | 'tasofro';
+export declare type TouhouTitleData = {
+    readonly characters: ReadonlyArray<TouhouCharacter>;
+    readonly titleNumber?: number;
+    readonly releasedYear?: number;
+    readonly tags: TouhouTitleTag[];
+};

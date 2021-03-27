@@ -1,4 +1,5 @@
-import { TouhouCharacter } from './types';
+import type { TouhouCharacter } from './types';
+export * from './filter';
 export declare type NameProcessContext = {
     readonly character: TouhouCharacter;
     readonly treatedAs: 'firstName' | 'lastName';

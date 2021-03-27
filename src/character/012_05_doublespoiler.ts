@@ -1,13 +1,14 @@
 import type { TouhouCharacter, TouhouTitleData } from '../types';
 
 const characters: ReadonlyArray<TouhouCharacter> = [
-  { nameType: 'fullname', firstName: 'reimu', lastName: 'hakurei' },
-  { nameType: 'fullname', firstName: 'marisa', lastName: 'kirisame' },
+  { nameType: 'fullname', firstName: 'hatate', lastName: 'himekaidou' },
 ] as const;
 
 const data: TouhouTitleData = {
   characters,
-  tags: ['common'],
+  releasedYear: 2010,
+  titleNumber: 12.5,
+  tags: ['windows'],
 };
 
 export default data;

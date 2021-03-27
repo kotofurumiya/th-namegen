@@ -1,6 +1,6 @@
-import type { TouhouCharacter } from '../types';
+import type { TouhouCharacter, TouhouTitleData } from '../types';
 
-const youyoumu: ReadonlyArray<TouhouCharacter> = [
+const characters: ReadonlyArray<TouhouCharacter> = [
   { nameType: 'fullname', firstName: 'letty', lastName: 'whiterock' },
   { nameType: 'simple', name: 'chen' },
   { nameType: 'fullname', firstName: 'alice', lastName: 'margatroid' },
@@ -14,4 +14,11 @@ const youyoumu: ReadonlyArray<TouhouCharacter> = [
   { nameType: 'fullname', firstName: 'yukari', lastName: 'yakumo' },
 ] as const;
 
-export default youyoumu;
+const data: TouhouTitleData = {
+  characters,
+  releasedYear: 2003,
+  titleNumber: 7,
+  tags: ['windows'],
+};
+
+export default data;

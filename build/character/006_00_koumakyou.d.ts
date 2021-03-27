@@ -1,3 +1,3 @@
-import type { TouhouCharacter } from '../types';
-declare const koumakyou: ReadonlyArray<TouhouCharacter>;
-export default koumakyou;
+import type { TouhouTitleData } from '../types';
+declare const data: TouhouTitleData;
+export default data;

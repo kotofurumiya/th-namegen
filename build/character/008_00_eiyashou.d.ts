@@ -1,3 +1,3 @@
-import type { TouhouCharacter } from '../types';
-declare const eiyashou: ReadonlyArray<TouhouCharacter>;
-export default eiyashou;
+import type { TouhouTitleData } from '../types';
+declare const data: TouhouTitleData;
+export default data;

@@ -1,5 +1,7 @@
-import { characters } from './character';
-import { TouhouCharacter } from './types';
+import { selectCharacters } from './filter';
+import type { TouhouCharacter } from './types';
+
+export * from './filter';
 
 export type NameProcessContext = {
   readonly character: TouhouCharacter;
@@ -47,6 +49,8 @@ const pickLastNameLike = (character: TouhouCharacter) => {
   }
 };
 
+const allCharacters = selectCharacters();
+
 /**
  * Generate random name string e.g. 'reimu-kirisame', 'yuyuko-yakumo'.
  * @param options
@@ -57,8 +61,12 @@ const pickLastNameLike = (character: TouhouCharacter) => {
 export const generateName = (options: TouhouNameGenOptions = {}): string => {
   const delimiter = options.delimiter ?? '-';
   const randomFunc = options.randomFunc ?? random;
-  const candidates = options.characterCandidates ?? characters;
+  const candidates = options.characterCandidates ?? allCharacters;
   const converter = options.nameChunkConverter ?? identity;
+
+  if (candidates.length === 0) {
+    throw new Error('`characterCandidates` is empty. It must contains some characters.');
+  }
 
   const characterA = candidates[randomFunc(0, candidates.length - 1)];
   const characterB = candidates[randomFunc(0, candidates.length - 1)];
