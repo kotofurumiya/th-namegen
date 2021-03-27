@@ -11,7 +11,7 @@ import {
   oneOfTitleTags,
   yearFrom,
   yearTo
-} from 'th-namegen';
+} from '@kotofurumiya/th-namegen';
 
 // no filters, which means select all available characters.
 const chars1 = selectCharacters();
@@ -35,7 +35,7 @@ const chars4 = selectCharacters([
 `oneOfTitleTags` tests a title includes one of `tags`.
 
 ```typescript
-import { generateName, selectCharacters, oneOfTitleTags } from 'th-namegen';
+import { generateName, selectCharacters, oneOfTitleTags } from '@kotofurumiya/th-namegen';
 
 const pc98 = selectCharacters([oneOfTitleTags(['pc-98'])]);
 
