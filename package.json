@@ -1,6 +1,6 @@
 {
   "name": "@kotofurumiya/th-namegen",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Random name string generater from Touhou Project",
   "main": "build/index.js",
   "types": "build/index.d.ts",
