@@ -23,12 +23,26 @@ marisa-cirno
 - [ ] Chireiden
 - [ ] ... rest many games
 
+## Support
+
+| Engine  | Version          | Status       | Note |
+|:--------|:-----------------|:-------------|:-----:|
+| Browser | legacy (e.g. IE) | 🚫 never      | \*1 |
+| Browser | es2018           | ✅ supported  |     |
+| Node.js | older than 13.2  | 🚫 never      |     |
+| Node.js | 13.2+            | ✅ supported  |     |
+| Node.js | 14.x             | ✅ supported  |     |
+| Node.js | 15.x             | ✅ supported  |     |
+| Deno    | any              | 🚧 not yet    |     |
+
+\*1: Not supported officially on Internet Explorer but it may be runnable via transpilers(tsc, babel).
+
 ## Usage(Node.js)
 
 Install:
 
 ```
-npm install th-namegen
+npm install @kotofurumiya/th-namegen
 ```
 
 Use it:
@@ -127,14 +141,22 @@ type TouhouCharacter =
       nameType: 'fullname';
       firstName: string;
       lastName: string;
+      aka?: string; //  e.g.'udonge' for Udongein
     };
 ```
 
 ## Contribution
 
-Requires Node.js v14+
+Requires Node.js v14+ for development
 
 1. clone this repoitory
-2. change codes
-3. run `npm run test`
-4. create Pull Request
+1. change codes
+1. run `npm run format`
+1. run `npm run lint`
+1. run `npm run test`
+1. `git add` changes(must includes `build/` directory)
+1. commit with [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/)
+    1. example1: `git commit -m "fix: make Koishi discoverable"`
+    1. example2: `git commit -m "feat: add beer for ZUN"`
+    1. example3: `git commit -m "refactor: sell unused magick items to Kourindou"`
+1. create Pull Request

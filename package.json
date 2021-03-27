@@ -1,5 +1,5 @@
 {
-  "name": "th-namegen",
+  "name": "@kotofurumiya/th-namegen",
   "version": "0.1.0",
   "description": "Random name string generater from Touhou Project",
   "main": "build/index.js",
@@ -7,11 +7,11 @@
   "type": "module",
   "scripts": {
     "build": "npm run build:node && npm run build:web",
-    "build:web": "esbuild src/index.ts --format=iife --global-name=thNameGen --bundle --minify --outfile=build/th-namegen-web.js --define:process.env.NODE_ENV=\\\"production\\\"",
+    "build:web": "esbuild src/index.ts --target=es2018 --format=iife --global-name=thNameGen --bundle --minify --outfile=build/th-namegen-web.js --define:process.env.NODE_ENV=\\\"production\\\"",
     "build:node": "esbuild src/index.ts --bundle  --format=esm --outfile=build/index.js --platform=node && tsc --emitDeclarationOnly --outDir build",
     "format": "prettier --write {src,__tests__}/",
     "lint": "eslint --max-warnings 0 src",
-    "test": "npm run lint && npm run build && NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "keywords": [
     "utility"
@@ -19,7 +19,10 @@
   "author": "Koto Furumiya <kotofurumiya@gmail.com>",
   "license": "Zlib",
   "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "@types/jest": "^26.0.21",
+    "@typescript-eslint/eslint-plugin": "^4.19.0",
     "esbuild": "^0.9.6",
     "eslint": "^7.22.0",
     "jest": "^26.6.3",
@@ -29,6 +32,7 @@
     "typescript": "^4.2.3"
   },
   "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
     "pre-commit": "npx lint-staged",
     "pre-push": "npm run test"
   },
@@ -36,6 +40,9 @@
     "src/**/*.ts": [
       "prettier --write",
       "eslint --max-warnings 0"
+    ],
+    "__tests__/**/*.js": [
+      "prettier --write"
     ]
   }
 }
